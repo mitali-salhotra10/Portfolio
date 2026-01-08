@@ -1,0 +1,335 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+/* =========================
+   NAVBAR
+   ========================= */
+
+.navbar {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 18px 0;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+}
+
+.nav-pill {
+    background-color: #FCD200;
+    padding: 12px 34px;
+    border-radius: 999px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links li {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+.nav-links li:hover {
+    background-color: rgba(255,255,255,0.35);
+    transform: translateY(-1px);
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+
+/* HOVER EFFECT */
+.nav-links li:hover {
+    background-color: rgba(255,255,255,0.35);
+    transform: translateY(-1px);
+}
+
+
+/* TIMELINE */
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 120px auto;
+    padding: 0 20px;
+}
+
+/* CENTER LINE (TREE TRUNK) */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background-color: #FCD200;
+    transform: translateX(-50%);
+}
+
+/* EACH NODE */
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 30px 40px;
+}
+
+/* LEFT / RIGHT ALTERNATION */
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+    text-align: left;
+}
+
+/* =========================
+   TIMELINE CONTENT ALIGNMENT
+   ========================= */
+
+.timeline-content {
+    background-color: #fff;
+    padding:60px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+
+    text-align: center; /* DEFAULT FOR PARAGRAPHS */
+}
+
+/* Heading aligned LEFT */
+.timeline-content h2 {
+    text-align: center;
+    color: #FCD200;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+/* Paragraphs centered */
+.timeline-content p {
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333;
+}
+
+
+/* CIRCLE NODE */
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    top: 40px;
+    width: 18px;
+    height: 18px;
+    background-color: #FCD200;
+    border-radius: 50%;
+}
+
+.timeline-item:nth-child(odd)::after {
+    right: -9px;
+}
+
+.timeline-item:nth-child(even)::after {
+    left: -9px;
+}
+
+/* TEXT */
+.timeline-content h2 {
+    color: #FCD200;
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   CONTACT FOOTER
+   ========================= */
+
+.contact-footer {
+    background-color: #ffffff;
+    padding: 100px 20px 60px;
+    border-top: 1px solid #e5e5e5;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-title {
+    font-size: 30px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 12px;
+}
+
+.footer-subtitle {
+    font-size: 15px;
+    color: #444;
+    max-width: 620px;
+    margin: 0 auto 60px;
+    text-align: justify;
+    line-height: 1.7;
+    letter-spacing: 0.15px;
+}
+
+/* CARDS GRID */
+.footer-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 32px;
+    margin-bottom: 60px;
+}
+
+/* CARD */
+.footer-card {
+    background-color: #f9e26d;
+    border: 1px solid #e5e5e5;
+    padding: 28px 22px;
+    border-radius: 16px;
+    text-align: center;
+
+    cursor: pointer;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25s ease;
+}
+
+/* HOVER EFFECT (PRO & SUBTLE) */
+.footer-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 36px rgba(0,0,0,0.12);
+    background-color: #ffffff;
+}
+
+/* ACTIVE (CLICK FEEDBACK) */
+.footer-card:active {
+    transform: translateY(-2px);
+}
+
+/* TEXT */
+.footer-card h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #000;
+}
+
+.footer-card p,
+.footer-card a {
+    font-size: 14px;
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    text-align: center;
+}
+
+/* LINK HOVER */
+.footer-card a:hover {
+    color: #FCD200;
+}
+
+/* FOOTER BOTTOM */
+.footer-bottom {
+    border-top: 1px solid #e5e5e5;
+    padding-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 13px;
+    color: #000000;
+}
+
+.footer-bottom {
+    border-top: 1px solid #e5e5e5;
+    padding-top: 20px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 13px;
+    color: #000000;
+}
+
+.footer-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 36px rgba(0,0,0,0.12);
+    background-color: #ffffff;
+}
+
+.footer-card a:hover {
+    color: #FCD200;
+}
+
+.footer-card p,
+.footer-card a {
+    font-size: 14px;
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    text-align: center;
+}
+
+/* =========================
+   TIMELINE SCROLL ANIMATION
+   ========================= */
+
+/* Initial hidden state */
+.timeline-item {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Visible state */
+.timeline-item.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Slight delay for alternating items (nice flow) */
+.timeline-item:nth-child(odd).show {
+    transition-delay: 0.1s;
+}
+
+.timeline-item:nth-child(even).show {
+    transition-delay: 0.2s;
+}
+
+/* SCROLL REVEAL EFFECT */
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 80px 40px;   /* ⬅️ increased vertical spacing */
+}
+
+
+.timeline-item.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
